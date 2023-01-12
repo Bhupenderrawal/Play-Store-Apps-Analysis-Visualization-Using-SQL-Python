@@ -1,0 +1,59 @@
+-- Uploded / Imported  reviews cleaned csv (second dataset) file as  reviewsdataset in DBeaver                                         
+                                          
+
+ 
+select * from Reviewsdataset 
+
+
+-- Q11 Get the number of reviews having positive sentiment and number of reviews having negative sentiment for the app 10 best foods for you and compare them.
+
+
+
+SELECT
+  SUM(CASE WHEN sentiment = 'Positive' THEN 1 ELSE 0 END) AS Positive_sentiment,
+  SUM(CASE WHEN sentiment = 'Negative' THEN 1 ELSE 0 END) AS Negative_sentiment
+FROM Reviewsdataset 
+WHERE App = '10 Best Foods for You';
+
+
+
+-- There are 162 positive sentiment
+-- there are 10 negative sentiment
+
+
+
+-- Q2 Which comments of ASUS SuperNote have sentiment polarity and sentiment subjectivity both as 1?
+ 
+
+
+SELECT Translated_Review 
+FROM Reviewsdataset 
+WHERE app = 'ASUS SuperNote' AND sentiment_polarity = 1 AND sentiment_subjectivity = 1;
+
+
+
+-- 'Awesome!!!!' comments of ASUS SuperNote have sentiment polarity and sentiment subjectivity both as 1
+
+
+
+-- Q3 Get all the neutral sentiment reviews for the app Abs Training-Burn belly fat 
+
+
+
+SELECT Translated_Review  , Sentiment 
+FROM Reviewsdataset 
+WHERE app = 'Abs Training-Burn belly fat'  AND sentiment = 'Neutral';
+
+
+
+-- Q4 Extract all negative sentiment reviews for Adobe Acrobat Reader with their sentiment polarity and sentiment subjectivity
+
+
+
+SELECT *
+FROM Reviewsdataset 
+WHERE app = 'Adobe Acrobat Reader' AND sentiment = 'Negative';
+
+
+
+--There are 28  negative sentiment reviews for Adobe Acrobat Reader
