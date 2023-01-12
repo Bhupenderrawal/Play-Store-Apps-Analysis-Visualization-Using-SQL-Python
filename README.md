@@ -9,8 +9,8 @@
   * This project also involves visualizing the data to better and easily understand trends and different categories.
 
 ## Project Modules:
-  * Module 1: Pre-processing, Analyzing data using Python and SQL.
-  *  Module 2: Visualizing data using Power BI.
+  *  [Module 1](https://github.com/Bhupenderrawal/Play-Store-Apps-Analysis-Visualization-Using-SQL-Python/tree/master/Module%201) : Pre-processing, Analyzing data using Python and SQL.
+  * Module 2: Visualizing data using Power BI.
 
 ## Project Prerequisites
   * SQL (MYSQL)
